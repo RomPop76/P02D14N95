@@ -64,12 +64,25 @@
  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
  <script>
     $(document).on('scroll', function() {
+
+      $('div.info').text('Obecna pozycja scrola to: ' + $(document).scrollTop().toFixed() + 'px');
+
+
         if($(document).scrollTop() > 200) {
             $('div.info').addClass('active');
+
+        } else {
+          $('div.info').removeClass('active');
         }
 
-        console.log($(document).scrollTop())
+        // console.log($(document).scrollTop())
+
+        // if($(document).scrollTop() < 200) {
+        //   $('div.info').removeClass('active');
+        // }
     })
+
+    // $('div.info').text($(document).scrollTop());
  </script>
 </body>
 
